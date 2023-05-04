@@ -15,7 +15,9 @@ A lightweight tree-like timeline component base on **Vue3** without any dependen
 
 ## Mobile friendly
 
-![Screenshot](https://i.imgur.com/C1oG6pr.gif)
+[Screenshot](https://i.imgur.com/C1oG6pr.gif)
+
+![Screenshot](https://i.imgur.com/PQTlf2g.gif)
 
 ## Install
 
