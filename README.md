@@ -53,7 +53,7 @@ Vue template
 ```html
 <TreeLikeTimeline :data="list">
   <template v-slot="{ item }">
-    <article class="timeline__node">
+    <article>
       <time>{{ item.time }}</time>
       <h3>{{ item.title }}</h3>
       <p>{{ item.content }}</p>
@@ -187,9 +187,9 @@ HTML
 <TreeLikeTimeline :data="list">
   <template v-slot="{ item }">
     <article>
-      <img :src="item.thumb" :alt="item.title" :width="item.thumb_size" />
-      <time>{{ timeFilter(item.time) }}</time>
-      <p>{{ item.title }}</p>
+      <time>{{ item.time }}</time>
+      <h3>{{ item.title }}</h3>
+      <p>{{ item.content }}</p>
     </article>
   </template>
 </TreeLikeTimeline>
