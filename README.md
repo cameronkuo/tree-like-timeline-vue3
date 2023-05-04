@@ -159,12 +159,8 @@ You can format timenode label by using `divider-label` attribute.
 ```
 
 ```js
-export default {
-  methods: {
-    formatDividerLabel(timeValue) {
-      return new Date(timeValue).getFullYear();
-    },
-  },
+const formatDividerLabel = (timeValue) => {
+  return new Date(timeValue).getFullYear();
 };
 ```
 
