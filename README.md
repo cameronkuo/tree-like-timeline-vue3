@@ -15,9 +15,9 @@ A lightweight tree-like timeline component base on **Vue3** without any dependen
 
 ## Mobile friendly
 
-[Screenshot](https://i.imgur.com/C1oG6pr.gif)
+[Screenshot](https://i.imgur.com/zJHxxs9.gif)
 
-![Screenshot](https://i.imgur.com/PQTlf2g.gif)
+![Screenshot](https://i.imgur.com/397ERgE.gif)
 
 ## Install
 
@@ -42,7 +42,7 @@ Import `tree-like-timeline-vue3.css` file
 ```
 
 Or
-Import `tree-like-timeline-vue3.css` in your main js ro ts file
+Import `tree-like-timeline-vue3.css` in your main js or ts file
 
 ```js
 import "tree-like-timeline-vue3/dist/tree-like-timeline-vue3.css";
@@ -104,7 +104,7 @@ const list = [
 
 ### offsetTop
 
-When the content of the nodes on both sides are completely side by side, you can independently adjust the node to be shifted downward.
+When the content of the nodes on both sides is completely side by side, you can independently adjust the node to be shifted downward.
 
 ```html
 <TreeLikeTimeline :data="list">
@@ -167,7 +167,7 @@ const formatDividerLabel = (timeValue) => {
 ### Theme and Text Color
 
 You can custom theme color by using `theme` attribute.
-Also change text color of timeline node by using `text-color`.
+Also, change text color of timeline node by using `text-color`.
 
 ```html
 <TreeLikeTimeline :data="list" theme="#738bff" text-color="#fffff">
