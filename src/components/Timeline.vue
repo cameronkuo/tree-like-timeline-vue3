@@ -3,15 +3,11 @@ import { computed, nextTick, onMounted, ref } from "vue";
 
 import resizeObserver from "@/utils/resize-observer";
 
-export type TimelineNodeProps = {
-	time: string;
-	offsetTop?: string;
-	[key: string]: any;
-};
+import type { TimelineItemProps } from "./types";
 
 const props = withDefaults(
 	defineProps<{
-		data: TimelineNodeProps[];
+		data: TimelineItemProps[];
 		theme?: string;
 		textColor?: string;
 		dividerLabel?: (time: string) => string;
@@ -24,15 +20,15 @@ const props = withDefaults(
 
 const sortedList = computed(() =>
 	props.data
-		.reduce((a: TimelineNodeProps[], b) => {
+		.reduce((a: TimelineItemProps[], b) => {
 			const time = new Date(b.time).getFullYear().toString();
 			if (
 				!a.find(
-					(item: TimelineNodeProps) =>
+					(item: TimelineItemProps) =>
 						new Date(item.time).getFullYear().toString() == time
 				)
 			)
-				a.push({ time: time, divider: true });
+				a.push({ time, divider: true });
 			a.push(b);
 			return a;
 		}, new Array())
