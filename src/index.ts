@@ -4,7 +4,7 @@ import Timeline from "./components/Timeline.vue";
 export * from "./components/types";
 
 Timeline.install = (app: App) => {
-	app.component(Timeline.name, Timeline);
+  app.component(Timeline.name, Timeline);
 };
 
 export default Timeline;
