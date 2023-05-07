@@ -1,6 +1,10 @@
-# tree-like-timeline-vue3
+# @cameronkuo/tree-like-timeline-vue3
 
 A lightweight tree-like timeline component base on **Vue3** without any dependency.
+
+## Recommended IDE Setup
+
+[VS Code](https://code.visualstudio.com) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
 ## Features
 
@@ -22,30 +26,30 @@ A lightweight tree-like timeline component base on **Vue3** without any dependen
 ## Install
 
 ```shell
-npm install tree-like-timeline-vue3
+npm install @cameronkuo/tree-like-timeline-vue3
 ```
 
 ## Quick Start
 
-Import `tree-like-timeline-vue3` component
+Import component
 
 ```js
-import TreeLikeTimeline from "tree-like-timeline-vue3";
+import TreeLikeTimeline from "@cameronkuo/tree-like-timeline-vue3";
 ```
 
-Import `tree-like-timeline-vue3.css` file
+Import style file
 
 ```css
 <style>
-@import "tree-like-timeline-vue3/dist/tree-like-timeline-vue3.css";
+@import "@cameronkuo/tree-like-timeline-vue3/dist/style.css";
 </style>
 ```
 
 Or
-Import `tree-like-timeline-vue3.css` in your main js or ts file
+Import in your main js or ts file
 
 ```js
-import "tree-like-timeline-vue3/dist/tree-like-timeline-vue3.css";
+import "@cameronkuo/tree-like-timeline-vue3/dist/style.css";
 ```
 
 Vue template
@@ -100,11 +104,23 @@ const list = [
 ]
 ```
 
+## Typescript support
+
+```js
+import type { TimelineItemProps } from "@cameronkuo/tree-like-timeline-vue3"
+
+const list: TimelineItemProps[]  = [
+  ...
+]
+```
+
 ## Options
 
 ### offsetTop
 
 When the content of the nodes on both sides is completely side by side, you can independently adjust the node to be shifted downward.
+
+Vue
 
 ```html
 <TreeLikeTimeline :data="list">
@@ -113,6 +129,8 @@ When the content of the nodes on both sides is completely side by side, you can 
   </template>
 </TreeLikeTimeline>
 ```
+
+Data
 
 ```js
 const list = [
@@ -181,7 +199,7 @@ Also, change text color of timeline node by using `text-color`.
 
 You can access the class `.tree-like-timeline-vue3__node_item` to custom content style
 
-HTML
+Vue
 
 ```html
 <TreeLikeTimeline :data="list">
