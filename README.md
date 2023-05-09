@@ -1,4 +1,4 @@
-# @cameronkuo/tree-like-timeline-vue3
+# tree-like-timeline-vue3
 
 A lightweight tree-like timeline component base on **Vue3** without any dependency.
 
@@ -26,7 +26,7 @@ A lightweight tree-like timeline component base on **Vue3** without any dependen
 ## Install
 
 ```shell
-npm install @cameronkuo/tree-like-timeline-vue3
+npm install tree-like-timeline-vue3
 ```
 
 ## Quick Start
@@ -34,14 +34,14 @@ npm install @cameronkuo/tree-like-timeline-vue3
 Import component
 
 ```js
-import TreeLikeTimeline from "@cameronkuo/tree-like-timeline-vue3";
+import TreeLikeTimeline from "tree-like-timeline-vue3";
 ```
 
 Import style file
 
 ```css
 <style>
-@import "@cameronkuo/tree-like-timeline-vue3/dist/style.css";
+@import "tree-like-timeline-vue3/style.css";
 </style>
 ```
 
@@ -49,7 +49,7 @@ Or
 Import in your main js or ts file
 
 ```js
-import "@cameronkuo/tree-like-timeline-vue3/dist/style.css";
+import "tree-like-timeline-vue3/style.css";
 ```
 
 Vue template
@@ -107,7 +107,7 @@ const list = [
 ## Typescript support
 
 ```js
-import type { TimelineItemProps } from "@cameronkuo/tree-like-timeline-vue3"
+import type { TimelineItemProps } from "tree-like-timeline-vue3"
 
 const list: TimelineItemProps[]  = [
   ...
@@ -117,7 +117,7 @@ const list: TimelineItemProps[]  = [
 Or
 
 ```js
-import type { TimelineProps } from "@cameronkuo/tree-like-timeline-vue3"
+import type { TimelineProps } from "tree-like-timeline-vue3"
 
 const list: TimelineProps["data"]  = [
   ...
