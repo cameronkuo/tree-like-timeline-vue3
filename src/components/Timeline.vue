@@ -3,20 +3,27 @@ import { computed, nextTick, onMounted, ref } from "vue";
 
 import resizeObserver from "@/utils/resize-observer";
 
-import type { TimelineItemProps } from "./types";
+/**
+ * Relevant RFC section
+ * 目前沒辦法在 Vue 裡面 import 多個 type 或是複雜 type
+ * > Currently complex types and type imports from other files are not supported.
+ * > It is theoretically possible to support type imports in the future.
+ * @see https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md#type-only-propsemit-declarations
+ */
 
-const props = withDefaults(
-  defineProps<{
-    data: TimelineItemProps[];
-    theme?: string;
-    textColor?: string;
-    dividerLabel?: (time: string) => string;
-  }>(),
-  {
-    theme: "lightgray",
-    textColor: "#000",
-  }
-);
+import type { TimelineItemProps } from "./timeline";
+
+export type TimelineProps = {
+  data: TimelineItemProps[];
+  theme?: string;
+  textColor?: string;
+  dividerLabel?: (time: string) => string;
+};
+
+const props = withDefaults(defineProps<TimelineProps>(), {
+  theme: "lightgray",
+  textColor: "#000",
+});
 
 const sortedList = computed(() =>
   props.data

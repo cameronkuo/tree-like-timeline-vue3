@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import Timeline from "@/components/Timeline.vue";
-
-import type { TimelineItemProps } from "..";
+import Timeline, { type TimelineItemProps } from "@/components";
 
 const list: TimelineItemProps[] = [
   {

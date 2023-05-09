@@ -1,10 +1,5 @@
-import type { App } from "vue";
-import Timeline from "./components/Timeline.vue";
+import Timeline from "./components";
 
-export * from "./components/types";
-
-Timeline.install = (app: App) => {
-  app.component(Timeline.name, Timeline);
-};
+export * from "./components";
 
 export default Timeline;
