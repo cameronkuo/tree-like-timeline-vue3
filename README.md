@@ -114,6 +114,16 @@ const list: TimelineItemProps[]  = [
 ]
 ```
 
+Or
+
+```js
+import type { TimelineProps } from "@cameronkuo/tree-like-timeline-vue3"
+
+const list: TimelineProps["data"]  = [
+  ...
+]
+```
+
 ## Options
 
 ### offsetTop
